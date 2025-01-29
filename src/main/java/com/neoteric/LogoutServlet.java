@@ -5,7 +5,7 @@ import jakarta.servlet.http.*;
 
 import java.io.IOException;
 
-public class LogoutServlet extends HttpServlet{
+public class   LogoutServlet extends HttpServlet{
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -15,7 +15,12 @@ public class LogoutServlet extends HttpServlet{
             session.invalidate(); // End the session
             System.out.println("User logged out. Session invalidated.");
         }
+
+
         response.sendRedirect("index.jsp");
+
+
+
     }
 
 
